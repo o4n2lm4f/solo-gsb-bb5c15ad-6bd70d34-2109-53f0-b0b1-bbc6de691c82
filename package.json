@@ -1,0 +1,22 @@
+{
+  "name": "json-contract-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "从零散 JSON 样本递归归纳 JSON Schema 2020-12 接口契约的 Web 应用",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c cyan,magenta \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "test": "node --test server/test/"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

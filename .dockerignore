@@ -1,0 +1,9 @@
+node_modules
+**/node_modules
+client/dist
+*.log
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+.DS_Store
